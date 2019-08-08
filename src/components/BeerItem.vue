@@ -12,12 +12,7 @@ import {eventBus} from '../main';
 
 export default {
   name: 'beer-item',
-  props: [ 'beer' ],
-  data(){
-    return {
-      isfavourite: false
-    }
-  },
+  props: [ 'beer', 'isfav'],
   methods: {
     handleClick() {
       this.isfavourite = true;

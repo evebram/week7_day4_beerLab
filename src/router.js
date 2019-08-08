@@ -9,12 +9,14 @@ const router = new Router({
     {
       path: '',
       name: 'home',
-      component: Home
+      component: Home,
+      props: true
     },
     {
       path: '/favourites',
       name: 'favourites',
-      component: Favourites
+      component: Favourites,
+      props: true
     }
   ]
 });

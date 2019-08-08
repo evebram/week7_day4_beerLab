@@ -14,11 +14,7 @@ export default {
   components:{
     'beer-list': BeerList
   },
-  data() {
-    return {
-      beers: []
-    }
-  },
+  props: [ 'beers' ],
   mounted(){
     eventBus.$on('BeersLoaded', beers => this.beers = beers)
   }
