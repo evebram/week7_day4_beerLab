@@ -58,5 +58,5 @@ export default {
 
 <!-- QUESTIONS -->
 <!-- passing data to routes? -->
-<!-- data persistence across distant routes -->
+<!-- data persistence across different routes -->
 <!-- where to make fetch requests -->
