@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Beer</router-link>
+      <router-link to="/">Home</router-link>
       <router-link to="/favourites">Favourites</router-link>
     </nav>
     <router-view />
@@ -9,20 +9,18 @@
 </template>
 
 <script>
+import {eventBus} from './main';
 export default {
   name: 'app',
-  data(){
-    return{
-      beers: []
-    }
-  },
   mounted(){
     fetch('https://api.punkapi.com/v2/beers')
     .then(res => res.json())
     //.then(beers => console.log(beers));
-    .then(beers => this.beers = beers);
+    // .then(beers => this.beers = beers);
+    .then(beers => eventBus.$emit('BeersLoaded', beers));
+
+    }
   }
-}
 </script>
 
 <style>
